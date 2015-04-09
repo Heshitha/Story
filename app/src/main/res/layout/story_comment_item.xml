@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/addphotodefaultimage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/imgCommenterImage"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Steve Chernoski"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="70dp"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:inputType="text"
+        android:id="@+id/txtCommenterName"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="by Jan 03, 2015"
+        android:layout_below="@+id/txtCommenterName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="70dp"
+        android:textColor="#777575"
+        android:textSize="10sp"
+        android:id="@+id/txtCommentDate"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The administration of Sir Edmund Andros lacked scarcely a single characteristic of tyranny—a governor and council holding office from the king and wholly independent of the country;"
+        android:layout_below="@+id/txtCommentDate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#494747"
+        android:textSize="10sp"
+        android:id="@+id/txtCommentText"
+        android:lineSpacingExtra="3dp"
+        />
+
+</RelativeLayout>

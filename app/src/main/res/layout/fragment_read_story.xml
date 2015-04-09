@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.heshitha.story.ReadStoryActivity"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#f6f6f6"
+        android:id="@+id/relativeLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:drawableTop="@drawable/favouriteicon"
+                android:text="Favourite"
+                style="@style/storyviewlowerbuttonstyle"
+                android:id="@+id/btnAddToFavourite"
+                />
+            <Button
+                android:drawableTop="@drawable/reviewsicon"
+                android:text="Reviews"
+                style="@style/storyviewlowerbuttonstyle"
+                android:id="@+id/btnReviewStory"
+                />
+            <Button
+                android:drawableTop="@drawable/bookmarkicon"
+                android:text="Bookmark"
+                style="@style/storyviewlowerbuttonstyle"
+                android:id="@+id/btnBookmark"
+                />
+            <Button
+                android:drawableTop="@drawable/flagicon"
+                android:text="Flag"
+                style="@style/storyviewlowerbuttonstyle"
+                android:id="@+id/btnFlag"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Death Of Expertise"
+                android:id="@+id/txtStoryTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:padding="15dp"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/storyreaderstorytitlebackground"
+                android:textColor="#434343"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtStoryTitle"
+                android:id="@+id/llStoryDetailsHolder"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By"
+                    android:id="@+id/txtByText"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#918c8c"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cheryl bruder"
+                    android:id="@+id/txtAuthorName"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#fd0505"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="at"
+                    android:id="@+id/txtAtText"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#918c8c"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jan 17, 2015"
+                    android:id="@+id/txtDateText"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#918c8c"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStoryContent"
+                android:text="There was once a time when New England groaned under the actual pressure of heavier wrongs than those threatened ones which brought on the Revolution. James II., the bigoted successor of Charles the Voluptuous, had annulled the charters of all the colonies and sent a harsh and unprincipled soldier to take away our liberties and endanger our religion.
+\n\n
+The administration of Sir Edmund Andros lacked scarcely a single characteristic of tyranny—a governor and council holding office from the king and wholly independent of the country; laws made and taxes levied without concurrence of the people, immediate or by their representatives; the rights of private citizens violated and the titles of all landed property declared void; the voice of complaint stifled by restrictions on the press; and finally, disaffection overawed by the first band of mercenary troops that ever marched on our free soil. For two years our ancestors were kept in sullen submission by that filial love which had invariably secured their allegiance to the mother-country, whether its head chanced to be a Parliament, Protector or popish monarch. Till these evil times, however, such allegiance had been merely nominal, and the colonists had ruled themselves, enjoying far more freedom than is even yet the privilege of the native subjects of Great Britain.\n\n
+At length a rumor reached our shores that the prince of Orange had ventured on an enterprise the success of which would be the triumph of civil and religious rights and the salvation of New England. It was but a doubtful whisper; it might be false or the attempt might fail, and in either case the man that stirred against King James would lose his head. Still,
+\n\n
+the intelligence produced a marked effect. The people smiled mysteriously in the streets and threw bold glances at their oppressors, while far and wide there was a subdued and silent agitation, as if the slightest signal would rouse the whole land from its sluggish despondency. Aware of their danger, the rulers resolved to avert it by an imposing display of strength, and perhaps to confirm their despotism by yet harsher measures.\n\n
+One afternoon in April, 1689, Sir Edmund Andros and his favorite councillors, being warm with wine, assembled the red-coats of the governor's guard and made their appearance in the streets of Boston. The sun was near setting when the march commenced. The roll of the drum at that unquiet crisis seemed to go through the streets less as the martial music of the soldiers than as a muster-call to the inhabitants themselves. A multitude by various avenues assembled in King street, which was destined to be the scene, nearly a century afterward, of another encounter between the troops of Britain and a people struggling against her tyranny.\n\n
+Though more than sixty years had elapsed since the Pilgrims came, this crowd of their descendants still showed the strong and sombre features of their character perhaps more strikingly in such a stern emergency than on happier occasions. There was the sober garb, the general severity of mien, the gloomy but undismayed expression, the scriptural forms of speech and the confidence in Heaven's blessing on a righteous cause which would have marked a band of the original Puritans when threatened by some peril of the wilderness. Indeed, it was not yet time for the old spirit to be extinct, since there were men in the street that day who had worshipped there beneath the trees before a house was reared to the God for whom they had become exiles. Old soldiers of the Parliament were here, too, smiling grimly at the thought that their aged arms might strike"
+                android:layout_below="@+id/llStoryDetailsHolder"
+                android:layout_marginTop="5dp"
+                android:textColor="#494747"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="15sp"
+                android:lineSpacingExtra="2dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/seperator01"
+                android:layout_below="@+id/txtStoryContent"
+                android:background="#d9dbdb"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/recommendbuttonbackground"
+                android:drawableStart="@drawable/reviws"
+                android:drawablePadding="5dp"
+                android:text="View All Reviews"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btnViewAllReviews"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/seperator01"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/llRecommendedUsersHolder"
+                android:layout_below="@+id/btnViewAllReviews"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ben kline"
+                    android:textColor="#e41d1d"
+                    android:id="@+id/txtRecommendedFirstUser"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" and "
+                    android:textColor="#c5bebe"
+                    android:id="@+id/txtRecommendedAndText"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="37 others"
+                    android:textColor="#e41d1d"
+                    android:id="@+id/txtRecommendedNumberOfUsers"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" reviewed"
+                    android:textColor="#c5bebe"
+                    android:id="@+id/txtRecommendedText"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llViewComments"
+                android:layout_below="@id/llRecommendedUsersHolder"
+                android:orientation="vertical"
+                android:padding="10dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/llViewComments"
+                android:layout_marginTop="15dp"
+                android:background="#d9dbdb"
+                android:id="@+id/dividerLast"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have a thoughts to share?"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txtHaveAThoughtText"
+                android:textColor="#777575"
+                android:layout_below="@+id/dividerLast"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtHaveAThoughtText"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#e41d1d"
+                android:padding="5dp"
+                android:id="@+id/writeYourResponseHolder"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Write your response"
+                    android:id="@+id/btnWriteYourResponse"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:padding="0dp"
+                    />
+            </FrameLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

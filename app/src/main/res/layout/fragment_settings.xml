@@ -1,0 +1,415 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.heshitha.story.SettingsPageActivity"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scvSettingHolder"
+        android:layout_marginBottom="80dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:id="@+id/txtAccountTitle"
+                android:text="Account"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/logintextboxbackground"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAccountTitle"
+                android:id="@+id/txtPrimaryMailLabel"
+                android:text="Primary mail"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAccountTitle"
+                android:background="@drawable/logintextboxbackground"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:text="newsletter@zend.com"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:inputType="text"
+                android:id="@+id/txtPrimaryMailText"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPrimaryMailLabel"
+                android:id="@+id/txtPasswordLabel"
+                android:text="Password"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPrimaryMailLabel"
+                android:background="@drawable/logintextboxbackground"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:text="Change Password"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:id="@+id/txtPasswordText"
+                android:textColor="#fd0505"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPasswordLabel"
+                android:id="@+id/txtMobileLabel"
+                android:text="Mobile"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPasswordLabel"
+                android:background="@drawable/logintextboxbackground"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:text="+9412345678"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:inputType="text"
+                android:id="@+id/txtMobileText"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMobileLabel"
+                android:id="@+id/txtProfileTitle"
+                android:text="Profile"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/logintextboxbackground"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtProfileTitle"
+                android:id="@+id/txtChangeProfilePictureLabel"
+                android:text="Profile Image"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtProfileTitle"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:paddingBottom="2dp"
+                android:id="@+id/imgProfileImage"
+                android:src="@drawable/addphotodefaultimage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgProfileImage"
+                android:id="@+id/txtNameLabel"
+                android:text="Name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgProfileImage"
+                android:background="@drawable/logintextboxbackground"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:text="Amy Anderson"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:inputType="text"
+                android:id="@+id/txtNameText"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNameLabel"
+                android:id="@+id/txtAddNewAuthorLabel"
+                android:text="Add New Author"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <ImageView
+                android:src="@drawable/btnaddnewauthorimage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txtNameLabel"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:paddingBottom="2dp"
+                android:id="@+id/btnAddNewAuthor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnAddNewAuthor"
+                android:id="@+id/txtAuthorLabel"
+                android:text="Author"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnAddNewAuthor"
+                android:background="@drawable/logintextboxbackground"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:text="Cheryl Bruder"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:inputType="text"
+                android:id="@+id/txtAuthorText1"
+                android:textColor="#373c40"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAuthorText1"
+                android:background="@drawable/logintextboxbackground"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="150dp"
+                android:text="Tara Conklin"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:inputType="text"
+                android:id="@+id/txtAuthorText2"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAuthorText2"
+                android:id="@+id/txtOtherTitle"
+                android:text="Other"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/logintextboxbackground"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOtherTitle"
+                android:id="@+id/txtNotificationLabel"
+                android:text="Notification"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchNotification"
+                android:layout_below="@+id/txtOtherTitle"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/togglebuttonbackground"
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switchNotification"
+                android:id="@+id/txtNightModeLabel"
+                android:text="Night Mode"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"
+                />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchNightMode"
+                android:layout_below="@+id/switchNotification"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/togglebuttonbackground"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switchNightMode"
+                android:id="@+id/txtAppInfoTitle"
+                android:text="App Info"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/logintextboxbackground"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAppInfoTitle"
+                android:id="@+id/txtTermsOfServiceLabel"
+                android:text="Terms of Service"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAppInfoTitle"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:text="View"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:id="@+id/txtViewTermsOfService"
+                android:background="@drawable/redlinkbackground"
+                android:textColor="#fd0505"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTermsOfServiceLabel"
+                android:id="@+id/txtPrivacyPolicyLabel"
+                android:text="Privacy Policy"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTermsOfServiceLabel"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:text="View"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:id="@+id/txtViewPrivacyPolicy"
+                android:background="@drawable/redlinkbackground"
+                android:textColor="#fd0505"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPrivacyPolicyLabel"
+                android:id="@+id/txtVersionLabel"
+                android:text="Version"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="#373c40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPrivacyPolicyLabel"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:text="2.0"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="2dp"
+                android:textSize="15dp"
+                android:id="@+id/txtViewVersion"
+                android:textColor="#373c40"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e41d1d"
+        android:padding="5dp"
+        android:id="@+id/logoutButtonHolder"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sign Out"
+            android:id="@+id/btnSignOut"
+            android:layout_gravity="center"
+            android:background="@drawable/loginbuttonbackground"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:padding="0dp"
+            />
+    </FrameLayout>
+
+
+</RelativeLayout>

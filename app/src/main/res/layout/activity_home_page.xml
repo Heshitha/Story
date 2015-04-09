@@ -1,0 +1,198 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <!-- Framelayout to display Fragments -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlContentHolder"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rlTitleBarHolder"
+            android:background="#f6f6f6">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/imgBtnMenu"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/menu"
+                android:scaleType="centerInside"
+                android:background="@color/transparent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/txtTitleIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/titlebarstoryicon"
+                android:adjustViewBounds="true"/>
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imgBtnSettings"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/settingicon"
+                android:scaleType="centerInside"
+                android:background="@color/transparent"/>
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlTitleBarHolder"/>
+
+    </RelativeLayout>
+
+
+    <!-- Listview to display slider menu -->
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+        android:id="@+id/rlMenuHolder"
+        android:background="#fff"
+        >
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_upper_part"
+            android:id="@+id/rlMenuUpperPart">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/menu_profile_image_backgorund"
+                android:padding="2dp"
+                android:src="@drawable/ic_communities"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/imgMenuProfileImage"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humphrey Swynborne"
+                android:layout_toRightOf="@+id/imgMenuProfileImage"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="#fff"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:id="@+id/txtProfileName"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="newsletter@zend.com"
+                android:layout_below="@+id/txtProfileName"
+                android:layout_toRightOf="@+id/imgMenuProfileImage"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textColor="#ffe400"
+                android:textSize="10sp"
+                android:id="@+id/txtUserEmail"
+                />
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/list_slidermenu"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"
+            android:background="@color/list_background"
+            android:layout_below="@+id/rlMenuUpperPart"/>
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/list_slidermenu"
+            android:background="#fff">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLoginPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="#e41d1d"
+                android:padding="5dp"
+                android:id="@+id/flSignOutHolder"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Sign Out"
+                    android:id="@+id/btnSignOut"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLoginPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="#e41d1d"
+                android:padding="5dp"
+                android:id="@+id/flSignInHolder"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Sign In"
+                    android:id="@+id/btnSignIn"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    />
+            </FrameLayout>
+
+            </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

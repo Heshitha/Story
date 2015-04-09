@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.heshitha.story.CommentViewerActivity"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reviews for Snow White The Huntsman (45)"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:id="@+id/txtReviewsTitle"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtReviewsTitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:divider="@drawable/listviewdivider"
+            android:dividerHeight="1dp"
+            android:id="@+id/lstViewCommentList"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e41d1d"
+            android:padding="5dp"
+            android:id="@+id/showMoreRecommendsButtonHolder"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Show more recommends"
+                android:id="@+id/btnShowMoreRecommends"
+                android:layout_gravity="center"
+                android:background="@drawable/loginbuttonbackground"
+                android:textSize="13sp"
+                android:textColor="#fff"
+                android:padding="0dp"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.heshitha.story.StorySummeryActivity"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rlTitleBarHolder"
+        android:background="#f6f6f6">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/txtTitleIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/titlebarstoryicon"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlTitleBarHolder"
+        android:id="@+id/scrStoryContent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgStoryCoverImage"
+                android:adjustViewBounds="true"
+                android:src="@drawable/storybackground"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgStoryCoverImage"
+                android:layout_marginTop="20dp"
+                android:text="Snow White And The Huntsman"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:id="@+id/txtStoryTitle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtStoryTitle"
+                android:layout_marginTop="10dp"
+                android:text="By Lily Blake"
+                android:gravity="center"
+                android:textColor="#434343"
+                android:textSize="17sp"
+                android:id="@+id/txtAuthorName"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAuthorName"
+                android:layout_marginTop="10dp"
+                android:text="Rating : 4.1"
+                android:gravity="center"
+                android:textColor="#f49713"
+                android:textSize="12sp"
+                android:id="@+id/txtRatings"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbStoryRatingBar"
+                style="@style/starRatingBarMedium"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtRatings"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true"
+                android:rating="4.5"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rbStoryRatingBar"
+                android:layout_marginTop="10dp"
+                android:background="#9b9696"
+                android:id="@+id/dividerFirst"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSummeryTitle"
+                android:layout_below="@+id/dividerFirst"
+                android:text="Summery"
+                android:layout_marginTop="10dp"
+                android:textColor="#8c8b8b"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSummeryText"
+                android:layout_below="@id/txtSummeryTitle"
+                android:layout_marginTop="10dp"
+                android:text="There was once a time when New England groaned under the actual pressure of heavier wrongs than those threatened ones which brought on the Revolution. James II., the bigoted successor of Charles the Voluptuous, had annulled the charters of all the colonies and sent a harsh and unprincipled soldier to take away our liberties and endanger our religion.
+\r\n\r\nThe administration of Sir Edmund Andros lacked scarcely a single characteristic of tyranny—a governor and council holding office from the king and wholly independent of the country; laws made and taxes levied without concurrence of the people, immediate or by their representatives; the rights of private citizens violated and the titles of all landed property declared void; the voice of complaint stifled by restrictions on the press; and finally, disaffection overawed by the first band of mercenary troops that ever marched on our free soil."
+                android:textColor="#494747"
+                android:lineSpacingExtra="2dp"
+                android:textSize="14sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtSummeryText"
+                android:layout_marginTop="15dp"
+                android:background="#e41d1d"
+                android:padding="5dp"
+                android:id="@+id/readButtonHolder"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Read"
+                    android:id="@+id/btnRead"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:padding="0dp"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/readButtonHolder"
+                android:layout_marginTop="15dp"
+                android:background="#9b9696"
+                android:id="@+id/summeryAndPublicationSeparator"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPublicationTitle"
+                android:layout_below="@+id/summeryAndPublicationSeparator"
+                android:text="Publication"
+                android:layout_marginTop="10dp"
+                android:textColor="#8c8b8b"
+                android:textSize="15sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llPublishedStories"
+                android:layout_below="@+id/txtPublicationTitle"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/recommendbuttonbackground"
+                android:drawableStart="@drawable/reviws"
+                android:drawablePadding="5dp"
+                android:text="View All Reviews"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btnViewAllReviews"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/llPublishedStories"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/llRecommendedUsersHolder"
+                android:layout_below="@+id/btnViewAllReviews"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ben kline"
+                    android:textColor="#e41d1d"
+                    android:id="@+id/txtRecommendedFirstUser"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" and "
+                    android:textColor="#c5bebe"
+                    android:id="@+id/txtRecommendedAndText"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="37 others"
+                    android:textColor="#e41d1d"
+                    android:id="@+id/txtRecommendedNumberOfUsers"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" reviewed"
+                    android:textColor="#c5bebe"
+                    android:id="@+id/txtRecommendedText"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llViewComments"
+                android:layout_below="@id/llRecommendedUsersHolder"
+                android:orientation="vertical"
+                android:padding="10dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/llViewComments"
+                android:layout_marginTop="15dp"
+                android:background="#9b9696"
+                android:id="@+id/dividerLast"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have a thoughts to share?"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txtHaveAThoughtText"
+                android:textColor="#777575"
+                android:layout_below="@+id/dividerLast"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtHaveAThoughtText"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#e41d1d"
+                android:padding="5dp"
+                android:id="@+id/writeYourResponseHolder"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Write your response"
+                    android:id="@+id/btnWriteYourResponse"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:padding="0dp"
+                    />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

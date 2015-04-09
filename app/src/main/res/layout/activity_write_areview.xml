@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.heshitha.story.WriteAReviewActivity"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rlTitleBarHolder"
+        android:background="#f6f6f6">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/txtTitleIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/titlebarstoryicon"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTitleBarHolder">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Written in response to"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textSize="12sp"
+            android:id="@+id/txtWrittenInResponseToText"
+            android:layout_alignParentTop="true"
+            android:textColor="#9e9c9c"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWrittenInResponseToText"
+            android:text="Snow White And The Huntsman"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="#333333"
+            android:id="@+id/txtStoryTitle"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#adaaaa"
+            android:layout_below="@+id/txtStoryTitle"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="150dp"
+            android:id="@+id/separator01"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Ratings"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/separator01"
+            android:textColor="#8e8e8e"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtRatingLabel"
+            />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbStoryRatingBar"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtRatingLabel"
+            style="@style/starRatingBar"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rbStoryRatingBar"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="60dp"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rbYourBar"
+                android:hint="Your Response..."
+                android:textColorHint="#8e8e8e"
+                android:textColor="#333333"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                />
+
+        </ScrollView>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e41d1d"
+            android:padding="5dp"
+            android:id="@+id/logoutButtonHolder"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Publish"
+                android:id="@+id/btnPublish"
+                android:layout_gravity="center"
+                android:background="@drawable/loginbuttonbackground"
+                android:textSize="15sp"
+                android:textColor="#fff"
+                android:padding="0dp"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

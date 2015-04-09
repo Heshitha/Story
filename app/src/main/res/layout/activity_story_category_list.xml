@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.heshitha.story.StoryCategoryListActivity"
+android:background="#fff">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/relativeLayout"
+    android:background="#f6f6f6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCategoryTitle"
+        android:text="Categories"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#434343"
+        android:textSize="25dp"/>
+
+
+</RelativeLayout>
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lstViewStoryCategories"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="60dp"
+    android:layout_centerHorizontal="true"
+    android:divider="@null"
+    android:dividerHeight="0dp"/>
+
+
+</RelativeLayout>
+

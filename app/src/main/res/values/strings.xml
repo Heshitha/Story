@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Story</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_text">Welcome to your Story</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="termsandconditions">By joining you agree to our <u>Terms</u> &amp; <u>Privacy</u> <u>Policy</u></string>
+    <string name="forgot_your_password"><u>Forgot Your Password ?</u></string>
+    <string name="create_new_account"><u>Create New Account</u></string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="read_story_home_page">Read stories wherever you are</string>
+    <string name="write_story_home_page">Write your story on the go</string>
+    <string name="title_activity_story_catagory_list">Categories</string>
+    <string name="title_activity_story_list">StoryListActivity</string>
+    <string name="title_activity_story_list_activity2">StoryListActivity2</string>
+    <string name="title_activity_read_story">ReadStoryActivity</string>
+    <string name="title_activity_story_write">StoryWriteActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_retrieve_password">RetrievePasswordActivity</string>
+    <string name="title_activity_welcome_back">WelcomeBackActivity</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="title_activity_test_ui">TestUI</string>
+    <string name="title_activity_popular_stories_profile_tab">PopularStoriesProfileTabActivity</string>
+    <string name="title_activity_publication_stories_profile_tab">PublicationStoriesProfileTabActivity</string>
+    <string name="title_activity_drafts_stories_profile_tab">DraftsStoriesProfileTabActivity</string>
+    <string name="title_activity_my_list_profile_tab">MyListProfileTabActivity</string>
+    <string name="title_activity_settings_page">SettingsPageActivity</string>
+    <string name="title_activity_add_new_author">AddNewAuthorActivity</string>
+    <string name="title_activity_drawable_menu">DrawableMenuActivity</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_enter_verification_code">EnterVerificationCodeActivity</string>
+    <string name="title_activity_application_demo">ApplicationDemoActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_story_summery">StorySummeryActivity</string>
+    <string name="title_activity_publish_story">PublishStoryActivity</string>
+
+    <string-array name="sample_values">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+    </string-array>
+
+    <string name="title_activity_comment_viewer">CommentViewerActivity</string>
+    <string name="title_activity_view_user_info">ViewUserInfoActivity</string>
+    <string name="title_activity_write_areview">WriteAReviewActivity</string>
+    <string name="title_activity_home_page">Home Page</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Notification</item>
+        <item>Category</item>
+        <item>Home</item>
+        <item>Write Story</item>
+        <item>Settings</item>
+        <item>My Profile</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/notifyicn</item>
+        <item>@drawable/ic_category</item>
+        <item>@drawable/home</item>
+        <item>@drawable/ic_write_story</item>
+        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_profile</item>
+    </array>
+
+    <string name="title_activity_story_category_list">StoryCategoryListActivity</string>
+    <string name="title_activity_main_write_story">MainWriteStoryActivity</string>
+
+</resources>

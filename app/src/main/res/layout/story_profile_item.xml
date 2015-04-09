@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/profilestoryitemarrow"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/storybackground"
+        android:id="@+id/imgStoryImage"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chasing China"
+        android:textColor="#da6b66"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/txtStoryTitle"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By Kirk Hammet"
+        android:textColor="#6a6a6a"
+        android:textSize="12sp"
+        android:layout_below="@+id/txtStoryTitle"
+        android:id="@+id/txtStoryAuthor"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="40dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llRatingsHolder"
+        android:layout_below="@+id/txtStoryAuthor"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ratings 4.5"
+            android:textColor="#f49713"
+            android:textSize="9sp"
+            android:id="@+id/txtStoryRatings"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbStoryRatingBar"
+            style="@style/starRatingBarSmall"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:isIndicator="true"
+            android:rating="4.5"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#bebcbc"/>
+</RelativeLayout>
