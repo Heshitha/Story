@@ -4,6 +4,7 @@ package com.example.heshitha.story;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.heshitha.story.beanclasses.Comment_Bean;
+import com.example.heshitha.story.beanclasses.Story_Bean;
 import com.example.heshitha.story.common.CommonDataHolder;
 import com.example.heshitha.story.common.RoundImage;
 
@@ -210,5 +212,11 @@ public class StorySummeryFragment extends Fragment {
         return ThisView;
     }
 
+    public class LoadStoryDetails extends AsyncTask<Story_Bean, Story_Bean, Story_Bean>{
 
+        @Override
+        protected Story_Bean doInBackground(Story_Bean... params) {
+            return null;
+        }
+    }
 }
