@@ -54,4 +54,5 @@
         <item name="android:maxHeight">18dip</item>
         <item name="android:adjustViewBounds">true</item>
     </style>
+
 </resources>

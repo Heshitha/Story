@@ -1,22 +1,32 @@
 package com.example.heshitha.story;
 
 
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.heshitha.story.asynctasks.SaveReview;
 import com.example.heshitha.story.beanclasses.Comment_Bean;
+import com.example.heshitha.story.beanclasses.User_Bean;
 import com.example.heshitha.story.common.CommonDataHolder;
+import com.example.heshitha.story.common.HomePageMenuItem;
 import com.example.heshitha.story.common.MessageBox;
 import com.example.heshitha.story.common.MessageBoxType;
+import com.example.heshitha.story.common.RoundImage;
 
 
 /**
@@ -61,7 +71,7 @@ public class WriteAReviewFragment extends Fragment {
                     String response = txtYourResponse.getText().toString();
                     float rating = rbStoryRatingBar.getRating();
 
-                    Toast.makeText(getActivity(), response + " with " + rating +" ratings", Toast.LENGTH_LONG).show();
+
 
                     Comment_Bean comment_bean =  new Comment_Bean();
                     comment_bean.setUser(CommonDataHolder.LoggedUser);
@@ -69,8 +79,10 @@ public class WriteAReviewFragment extends Fragment {
                     comment_bean.setComment(response);
                     comment_bean.setRate(rating);
 
-                    SaveReview review = new SaveReview(comment_bean, getActivity());
-                    review.execute();
+                    ShowSelectAuthorType(comment_bean);
+
+                    //SaveReview review = new SaveReview(comment_bean, getActivity());
+                    //review.execute();
                 }
             });
 
@@ -81,6 +93,88 @@ public class WriteAReviewFragment extends Fragment {
         return ThisView;
     }
 
+    public void ShowSelectAuthorType(Comment_Bean comment_bean){
 
+        final Comment_Bean storyCommentBean = comment_bean;
+
+        try{
+            final Dialog dialog = new Dialog(getActivity());
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.story_write_author_selector);
+
+            ImageView imgStoryAccount = (ImageView)dialog.findViewById(R.id.imgUserImage);
+            ImageView imgAnonymousAuthor = (ImageView)dialog.findViewById(R.id.imgAnonymousImage);
+
+            Button btnStoryAccount = (Button)dialog.findViewById(R.id.btnStoryAccount);
+            Button btnAnonymousAuthor = (Button)dialog.findViewById(R.id.btnAnonymousAuthor);
+
+            btnAnonymousAuthor.setTypeface(CommonDataHolder.LatoBold);
+            btnStoryAccount.setTypeface(CommonDataHolder.LatoBold);
+
+            try{
+                if(CommonDataHolder.LoggedUser != null){
+                    imgStoryAccount.setImageDrawable(new RoundImage(CommonDataHolder.LoggedUser.getImage()));
+                }
+            }catch (Exception ex){
+
+            }
+
+
+            View.OnClickListener GoToStoryAccountListener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (CommonDataHolder.LoggedUser == null) {
+                        Intent i = new Intent(getActivity(), SignInActivity.class);
+                        startActivity(i);
+                    } else {
+                        SaveReview review = new SaveReview(storyCommentBean, getActivity(), WriteAReviewFragment.this);
+                        review.execute();
+                        dialog.dismiss();
+                    }
+                }
+            };
+
+            View.OnClickListener GoToAnonymousListener = new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    User_Bean anonymousUser = new User_Bean();
+                    anonymousUser.setId(0);
+
+                    storyCommentBean.setUser(anonymousUser);
+
+                    SaveReview review = new SaveReview(storyCommentBean, getActivity(), WriteAReviewFragment.this);
+                    review.execute();
+                    dialog.dismiss();
+                }
+            };
+
+            imgAnonymousAuthor.setOnClickListener(GoToAnonymousListener);
+            btnAnonymousAuthor.setOnClickListener(GoToAnonymousListener);
+
+            imgStoryAccount.setOnClickListener(GoToStoryAccountListener);
+            btnStoryAccount.setOnClickListener(GoToStoryAccountListener);
+
+            dialog.setCanceledOnTouchOutside(true);
+
+            Activity creatingContextActivity = getActivity();
+
+            Display display = creatingContextActivity.getWindowManager().getDefaultDisplay();
+
+            WindowManager.LayoutParams lp;
+
+            lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            lp.width = (int) (display.getWidth() * 1);
+
+            dialog.getWindow().setAttributes(lp);
+
+            dialog.show();
+
+        }catch (Exception ex){
+
+        }
+    }
 
 }

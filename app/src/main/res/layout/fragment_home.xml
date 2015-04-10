@@ -1,7 +1,230 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="com.example.heshitha.story.HomeFragment"
     android:background="#fff">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/logintextboxbackground"
+        android:paddingBottom="15dp"
+        android:id="@+id/relativeLayout3">
 
-</FrameLayout>
+        <ImageView
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundimagebackground"
+            android:padding="5dp"
+            android:src="@drawable/addphotodefaultimage"
+            android:id="@+id/imgProfileImage"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Heshitha Chathuranga"
+            android:layout_below="@+id/imgProfileImage"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:id="@+id/txtUserName"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/llTabButtonHolder"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Top Stories"
+                android:textColor="#8b8e90"
+                android:textColorHighlight="#3f9dd9"
+                android:background="@color/transparent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="15sp"
+                android:id="@+id/btnTabPopular"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#d9dbdb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Publication"
+                android:textColor="#8b8e90"
+                android:textColorHighlight="#3f9dd9"
+                android:background="@color/transparent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="15sp"
+                android:id="@+id/btnTabPublication"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#d9dbdb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drafts"
+                android:textColor="#8b8e90"
+                android:textColorHighlight="#3f9dd9"
+                android:background="@color/transparent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="15sp"
+                android:id="@+id/btnTabDrafts"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#d9dbdb"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="My List"
+                android:textColor="#8b8e90"
+                android:textColorHighlight="#3f9dd9"
+                android:background="@color/transparent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="15sp"
+                android:id="@+id/btnTabMyList"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTabButtonHolder">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rlPopularStoriesHolder"
+                android:layout_alignParentTop="true"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#bebcbc"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lstViewPopularStories"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rlPublicationStoriesHolder"
+                android:layout_alignParentTop="true"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#bebcbc"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lstViewPublicationStories"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rlDraftsStoriesHolder"
+                android:layout_alignParentTop="true"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#bebcbc"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lstViewDraftsStories"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rlMyListStoriesHolder"
+                android:layout_alignParentTop="true"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#bebcbc"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lstViewMyListStories"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

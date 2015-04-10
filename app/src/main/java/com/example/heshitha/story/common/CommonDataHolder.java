@@ -67,4 +67,6 @@ public class CommonDataHolder {
     public static Bitmap DefaultStoryImage;
 
     public static Story_Bean selectedStoryBean = new Story_Bean();
+    public static Story_Bean writtenStoryBean = new Story_Bean();
+
 }

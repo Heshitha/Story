@@ -1,11 +1,15 @@
 package com.example.heshitha.story.asynctasks;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.heshitha.story.R;
+import com.example.heshitha.story.StorySummeryFragment;
 import com.example.heshitha.story.beanclasses.Comment_Bean;
 import com.example.heshitha.story.common.CommonDataHolder;
 
@@ -28,10 +32,12 @@ public class SaveReview extends AsyncTask<Comment_Bean, String, String>{
     private Comment_Bean comment;
     private Context context;
     private ProgressDialog pDialog;
+    private Fragment fragment;
 
-    public SaveReview(Comment_Bean comment, Context context) {
+    public SaveReview(Comment_Bean comment, Context context, Fragment fragment) {
         this.comment = comment;
         this.context = context;
+        this.fragment = fragment;
     }
 
     @Override
@@ -52,6 +58,12 @@ public class SaveReview extends AsyncTask<Comment_Bean, String, String>{
         pDialog.dismiss();
 
         Log.d("Response",strFromDoInBg);
+        Toast.makeText(context, "Your review saved successfully", Toast.LENGTH_LONG).show();
+        Fragment storySummeryFragment = new StorySummeryFragment();
+        FragmentTransaction transaction = fragment.getFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_container, storySummeryFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     @Override

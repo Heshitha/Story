@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rlTitleBarHolder"
-        android:id="@+id/scrStoryContent">
+        android:id="@+id/scrStoryContent"
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,7 +22,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imgStoryCoverImage"
                 android:adjustViewBounds="true"
-                android:src="@drawable/storybackground"
                 android:scaleType="fitCenter"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"/>
@@ -31,7 +31,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imgStoryCoverImage"
                 android:layout_marginTop="20dp"
-                android:text="Snow White And The Huntsman"
                 android:gravity="center"
                 android:textColor="#333333"
                 android:textSize="20sp"
@@ -42,7 +41,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtStoryTitle"
                 android:layout_marginTop="10dp"
-                android:text="By Lily Blake"
                 android:gravity="center"
                 android:textColor="#434343"
                 android:textSize="17sp"
@@ -53,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtAuthorName"
                 android:layout_marginTop="10dp"
-                android:text="Rating : 4.1"
                 android:gravity="center"
                 android:textColor="#f49713"
                 android:textSize="12sp"
@@ -68,7 +65,6 @@
                 android:layout_below="@+id/txtRatings"
                 android:layout_marginTop="5dp"
                 android:isIndicator="true"
-                android:rating="4.5"
                 />
 
             <View
@@ -95,8 +91,6 @@
                 android:id="@+id/txtSummeryText"
                 android:layout_below="@id/txtSummeryTitle"
                 android:layout_marginTop="10dp"
-                android:text="There was once a time when New England groaned under the actual pressure of heavier wrongs than those threatened ones which brought on the Revolution. James II., the bigoted successor of Charles the Voluptuous, had annulled the charters of all the colonies and sent a harsh and unprincipled soldier to take away our liberties and endanger our religion.
-\r\n\r\nThe administration of Sir Edmund Andros lacked scarcely a single characteristic of tyranny—a governor and council holding office from the king and wholly independent of the country; laws made and taxes levied without concurrence of the people, immediate or by their representatives; the rights of private citizens violated and the titles of all landed property declared void; the voice of complaint stifled by restrictions on the press; and finally, disaffection overawed by the first band of mercenary troops that ever marched on our free soil."
                 android:textColor="#494747"
                 android:lineSpacingExtra="2dp"
                 android:textSize="14sp"/>

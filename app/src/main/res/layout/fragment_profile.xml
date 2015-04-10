@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Popular"
+                android:text="Top Stories"
                 android:textColor="#8b8e90"
                 android:textColorHighlight="#3f9dd9"
                 android:background="@color/transparent"

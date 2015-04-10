@@ -110,7 +110,7 @@ public class ReadStoryFragment extends Fragment {
         if(selectedStoryBean.getComments().size() > 0){
             Comment_Bean comment = selectedStoryBean.getComments().get(0);
             txtRecommendedFirstUser.setText(comment.getUser().getName());
-            txtRecommendedNumberOfUsers.setText(String.valueOf(selectedStoryBean.getComments().size()-1) + " others");
+            txtRecommendedNumberOfUsers.setText(String.valueOf(selectedStoryBean.getTotalComments()) + " others");
 
             for(int i = 0; i < selectedStoryBean.getComments().size(); i++){
                 View vi = inflater.inflate(R.layout.story_comment_item, null);

@@ -1,6 +1,7 @@
 package com.example.heshitha.story;
 
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -41,6 +42,26 @@ public class WriteStoryFragment extends Fragment {
 
         txtStoryTitle.setTypeface(CommonDataHolder.timesNewRomenBold);
         txtStoryContent.setTypeface(CommonDataHolder.timesNewRomen);
+
+        if(CommonDataHolder.LoggedUser == null){
+            imgBtnSaveStory.setVisibility(View.GONE);
+        }
+
+        imgBtnPublishStory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CommonDataHolder.writtenStoryBean.setFullStory(txtStoryContent.getText().toString());
+                CommonDataHolder.writtenStoryBean.setTitle(txtStoryTitle.getText().toString());
+
+                Fragment fragment = new PublishStoryFragment();
+
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                transaction.replace(R.id.frame_container, fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         return ThisView;
     }

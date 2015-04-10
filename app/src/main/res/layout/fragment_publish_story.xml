@@ -1,0 +1,144 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.heshitha.story.PublishStoryFragment"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlContentHolder"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#434343"
+                android:gravity="center"
+                android:text="Book Cover"
+                android:textSize="17sp"
+                android:id="@+id/txtBookCoverLabel"/>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/coverimagebackground"
+                android:layout_below="@+id/txtBookCoverLabel"
+                android:layout_marginTop="10dp"
+                android:id="@+id/imgStoryCoverImage"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/spinner_style"
+                android:popupBackground="#fff"
+                android:id="@+id/spnStoryCategory"
+                android:layout_below="@+id/imgStoryCoverImage"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:entries="@array/sample_values"
+                android:gravity="center"
+                android:padding="5dp"
+                ></Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dbdbdb"
+                android:layout_below="@+id/spnStoryCategory"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:id="@+id/spnStoryCategoryLine"/>
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/spinner_style"
+                android:popupBackground="#fff"
+                android:id="@+id/spnStoryAuthor"
+                android:entries="@array/sample_values"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_below="@+id/spnStoryCategoryLine"
+                android:padding="5dp"
+                ></Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dbdbdb"
+                android:layout_below="@+id/spnStoryAuthor"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
+                android:id="@+id/spnStoryAuthorLine"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bebcbc"
+                android:layout_below="@+id/spnStoryAuthor"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/seperator02"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSummeryText"
+                android:layout_below="@+id/seperator02"
+                android:background="@color/transparent"
+                android:textSize="15sp"
+                android:hint="Write Summery"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#666666"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/txtSummeryText"
+                android:background="#e41d1d"
+                android:padding="5dp"
+                android:id="@+id/logoutButtonHolder"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Publish"
+                    android:id="@+id/btnPublish"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginbuttonbackground"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:padding="0dp"
+                    />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
